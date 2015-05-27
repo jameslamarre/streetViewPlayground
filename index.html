@@ -28,12 +28,29 @@
 	<!-- c s s -->
 	<link rel="stylesheet" type="text/css" href="layout.css" />
 	
+	<!-- a n i m a t i o n s  -->
+	
+	<script type="text/javascript">
+		function textIn(){
+			document.getElementById('animation').className ='textBackground slideup';
+		}
+	</script>
 	
 	<!-- ****** E N D C O N T E N T *****-->
 	
 </head>
 
 <body>
+	
+	<div class="heartMoniterBackground">
+		<span class="heartMoniter">Loading...</span>
+		<span class="heartMoniter left">Loading...</span>
+		<span class="heartMoniter middle">Loading...</span>
+	</div>
+
+	<div id="animation" class="textBackground" onclick="textIn()">
+		
+	</div>
 
 	<iframe
 		width="100%"
@@ -44,6 +61,7 @@
 		&pitch=5
 		&fov=35">
 	</iframe>
+
 
 </body>
 
