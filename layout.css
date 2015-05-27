@@ -111,6 +111,9 @@ a:visited {
 	-webkit-transition: 0.5s ease-in-out;
     -moz-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
+    padding: 10px;
+    font-family: Helvetica;
+    font-size: small;
 }
 
 .textBackground.slideup {

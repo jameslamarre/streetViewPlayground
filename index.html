@@ -35,7 +35,38 @@
 			document.getElementById('animation').className ='textBackground slideup';
 		}
 	</script>
-	
+    
+    <!-- t y p i n g  -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="typed.js" type="text/javascript"></script>
+    	
+    <script>
+    $(function(){
+
+        $("#typed").typed({
+            strings: ["Can damming occur in the body? would it be visibly rendered on the skin, on the face? Are there dammed bodies moving among us, their movements themselves stopped and gapped -- by 50% or more? Is this the body of the populace, the emotional body that’s being damned, dammed with minor repressions, hatching through their walls -- nodes shining like star explosions, but faster -- and dimming, regressing back behind its wall until opportunity -- again -- strikes."],
+            typeSpeed: 2,
+            backDelay: 1000,
+            loop: false,
+            contentType: 'text', // or html
+            // defaults to false for infinite loop
+            loopCount: false,
+            callback: function(){ foo(); },
+            resetCallback: function() { newTyped(); }
+        });
+
+        $(".reset").click(function(){
+            $("#typed").typed('reset');
+        });
+
+    });
+
+    function newTyped(){ /* A new typed object */ }
+
+    function foo(){ console.log("Callback"); }
+
+    </script>
+    
 	<!-- ****** E N D C O N T E N T *****-->
 	
 </head>
@@ -49,7 +80,7 @@
 	</div>
 
 	<div id="animation" class="textBackground" onclick="textIn()">
-		
+		<span id="typed"> </span>
 	</div>
 
 	<iframe
