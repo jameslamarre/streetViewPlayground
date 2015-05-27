@@ -96,6 +96,30 @@ a:visited {
 	border-radius: 1px;
 	box-shadow: 1px 1px 0px #666666;
 	-webkit-clip-path: polygon(0% 0%, 80% 0%, 100% 45%, 100% 100%, 20% 100%, 0% 65%);
+}.hydrationMoniterBackground {
+	background-color: #F6F6F6;
+	background-image: url("water.jpg");
+	opacity: 0.95;
+	position: absolute;
+	height: 10%;
+	width: 20%;
+	bottom: 0%;
+	right: 0%;
+	border-radius: 1px;
+	box-shadow: 1px 1px 0px #666666;
+	-webkit-clip-path: polygon(0% 75%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 50%);
+}.energyMoniterBackground {
+	background-color: #F6F6F6;
+	opacity: 0.95;
+	position: absolute;
+	height: 10%;
+	width: 16%;
+	bottom: 0%;
+	right: 0%;
+	border: 1px solid #D1D1D1;
+	border-radius: 1px;
+	box-shadow: 1px 1px 0px #666666;
+	-webkit-clip-path: polygon(0% 0%, 80% 0%, 100% 45%, 100% 100%, 20% 100%, 0% 65%);
 }
 .textBackground {
 	background-color: #FAFAFA;
