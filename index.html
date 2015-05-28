@@ -48,7 +48,7 @@
             typeSpeed: 2,
             backDelay: 1000,
             loop: false,
-            contentType: 'text', // or html
+            contentType: 'html', // or text
             // defaults to false for infinite loop
             loopCount: false,
             callback: function(){ foo(); },
@@ -66,14 +66,14 @@
     function foo(){ console.log("Callback"); }
 
     </script>
-    
+
 	<!-- ****** E N D C O N T E N T *****-->
 	
 </head>
 
 <body>
 	
-	<div class="heartMoniterBackground">
+	<div id="spinner" class="heartMoniterBackground">
 		<span class="heartMoniter">Loading...</span>
 		<span class="heartMoniter left">Loading...</span>
 		<span class="heartMoniter middle">Loading...</span>
@@ -85,10 +85,13 @@
 		<span id="typed"> </span>
 	</div>
 	
-	<div class="hydrationMoniterBackground"></div>
-	
 	<div class="energyMoniterBackground"></div>
 
+	<div class="hydrationMoniterBackground">
+		<iframe width="300" height="199" src="https://www.youtube.com/embed/ktjXm5L1WH0?autoplay=1&showinfo=0&start=200&
+    loop=1"  frameborder="0"></iframe>
+	</div>
+	
 	<iframe
 		width="100%"
 		height="100%"
@@ -98,7 +101,6 @@
 		&pitch=5
 		&fov=35">
 	</iframe>
-
 
 </body>
 

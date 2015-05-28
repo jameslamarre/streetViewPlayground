@@ -96,7 +96,60 @@ a:visited {
 	border-radius: 1px;
 	box-shadow: 1px 1px 0px #666666;
 	-webkit-clip-path: polygon(0% 0%, 80% 0%, 100% 45%, 100% 100%, 20% 100%, 0% 65%);
-}.hydrationMoniterBackground {
+}
+@-webkit-keyframes spinner {
+	from { -webkit-transform: rotateY(0deg); -webkit-transform: rotateX(0deg); -webkit-transform: rotateZ(-1deg);   }
+	to   { -webkit-transform: rotateY(-180deg); -webkit-transform: rotateX(45deg); -webkit-transform: rotateZ(2deg); }
+}
+@keyframes spinner {
+	from {
+		-moz-transform: rotateY(0deg);
+		-ms-transform: rotateY(0deg);
+		transform: rotateY(0deg);
+		-moz-transform: rotateX(0deg);
+		-ms-transform: rotateX(0deg);
+		transform: rotateX(0deg);
+		-moz-transform: rotateZ(-1deg);
+		-ms-transform: rotateZ(-1deg);
+		transform: rotateZ(-1deg);
+	}
+	to {
+		-moz-transform: rotateY(-180deg);
+		-ms-transform: rotateY(-180deg);
+		transform: rotateY(-180deg);
+		-moz-transform: rotateX(45deg);
+		-ms-transform: rotateX(45deg);
+		transform: rotateX(45deg);
+		-moz-transform: rotateZ(2deg);
+		-ms-transform: rotateZ(2deg);
+		transform: rotateZ(2deg);
+	}
+}
+#stage {
+	margin: 1em auto;
+	-webkit-perspective: 16%;
+	-moz-perspective: 16%;
+	-ms-perspective: 16%;
+	perspective: 16%;
+}
+#spinner {
+	-webkit-animation-name: spinner;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-duration: 3s;
+
+	animation-name: spinner;
+	animation-timing-function: ase-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 3s;
+
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-animation-direction: alternate;
+}
+.hydrationMoniterBackground {
 	background-color: #F6F6F6;
 	/* background-image: url("water.jpg"); */
 	opacity: 0.95;
@@ -107,7 +160,7 @@ a:visited {
 	right: 0%;
 	border-radius: 1px;
 	box-shadow: 1px 1px 0px #666666;
-	-webkit-clip-path: polygon(0% 75%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 50%);
+	/* -webkit-clip-path: polygon(0% 75%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 50%); */
 }.energyMoniterBackground {
 	background-color: #F6F6F6;
 	opacity: 0.95;
@@ -145,8 +198,8 @@ a:visited {
     -moz-transform: translate(0,-14em);
     -ms-transform: translate(0,-14em);
     transform: translate(0,-14em);
-  }
-  
+}
+
 }@-webkit-keyframes heartMoniter {
   0% {
     -moz-transform: rotate(45deg) scale(0.7);
