@@ -118,7 +118,7 @@
         build: function() {
             // Insert cursor
             if (this.showCursor === true) {
-                this.cursor = $("<span class=\"typed-cursor\">" + this.cursorChar + "</span>");
+//                this.cursor = $("<span class=\"typed-cursor\">" + this.cursorChar + "</span>");
                 this.el.after(this.cursor);
             }
             this.init();
@@ -248,7 +248,7 @@
 
             // varying values for setTimeout during typing
             // can't be global since number changes each time loop is executed
-            var humanize = Math.round(Math.random() * (100 - 30)) + this.backSpeed;
+            var humanize = Math.round(Math.random() * (900 - 30)) + this.backSpeed;
             var self = this;
 
             self.timeout = setTimeout(function() {

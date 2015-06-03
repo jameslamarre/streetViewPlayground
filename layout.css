@@ -7,6 +7,7 @@ html, body {
 	font-family: arial, sans-serif;
 	color: black;
 	position: relative;
+	overflow: hidden;
 }
 	
 @keyframes animatedBackground {
@@ -89,7 +90,7 @@ a:visited {
 	opacity: 0.95;
 	position: absolute;
 	height: 10%;
-	width: 16%;
+	width: 230px;
 	top: 1%;
 	left: 0%;
 	border: 1px solid #D1D1D1;
@@ -151,11 +152,10 @@ a:visited {
 }
 .hydrationMoniterBackground {
 	background-color: #F6F6F6;
-	/* background-image: url("water.jpg"); */
 	opacity: 0.95;
 	position: absolute;
-	height: 10%;
-	width: 20%;
+	height: 24%;
+	width: 27%;
 	bottom: 0%;
 	right: 0%;
 	border-radius: 1px;
@@ -191,6 +191,24 @@ a:visited {
     padding: 10px;
     font-family: Helvetica;
     font-size: small;
+}.textBackground_right {
+	background-color: #FAFAFA;
+	opacity: 0.9;
+	position: absolute;
+	height: 4%;
+	width: 10%;
+	top: 5%;
+	right: 0.5%;
+	border: 1px solid #D1D1D1;
+	border-radius: 1px;
+	box-shadow: 1px 1px 1px #666666;
+	-webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    padding: 10px;
+    font-family: Helvetica;
+    font-size: x-large;
+    text-align: center;
 }
 
 .textBackground.slideup {

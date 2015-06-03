@@ -44,7 +44,7 @@
     $(function(){
 
         $("#typed").typed({
-            strings: ["Can damming occur in the body? would it be visibly rendered on the skin, on the face? Are there dammed bodies moving among us, their movements themselves stopped and gapped -- by 50% or more? Is this the body of the populace, the emotional body that’s being damned, dammed with minor repressions, hatching through their walls -- nodes shining like star explosions, but faster -- and dimming, regressing back behind its wall until opportunity -- again -- strikes."],
+            strings: ["Can damming occur in the body? would it be visibly rendered on the skin, on the face? Are there dammed bodies moving among us, their movements themselves stopped and gapped -- by 50% or more? Is this the body of the populace, the emotional body that’s being damned, dammed with minor repressions, hatching through their walls -- nodes shining like star explosions, but faster -- and dimming, regressing back behind its wall until opportunity -- again -- strikes. <br/><br/> Kicking out through experiences and moving for movement leaves no time for anything else. Moving takes time, it’s durational, and when movement needs to be already augmented by lattices of decency and social constructions (shelter, aromatics) as well as the ways of movement themselves, when the body does not enact a particular transportation from point a to point b but instead relies on another vehicle. How fast would train a have to go to meet point b, somewhere out west?"],
             typeSpeed: 2,
             backDelay: 1000,
             loop: false,
@@ -62,6 +62,33 @@
     });
 
     function newTyped(){ /* A new typed object */ }
+
+    function foo(){ console.log("Callback"); }
+
+    </script>
+    
+    <script>
+    $(function(){
+
+        $("#typed_right").typed({
+            strings: ["CANYON", "FOREST", "+", "DRY", "UPTIGHT"],
+            typeSpeed: 5,
+            backDelay: 1500,
+            loop: true,
+            contentType: 'html', // or text
+            // defaults to false for infinite loop
+            loopCount: false,
+            callback: function(){ foo(); },
+            resetCallback: function() { newTyped_right(); }
+        });
+
+        $(".reset").click(function(){
+            $("#typed_right").typed('reset');
+        });
+
+    });
+
+    function newTyped_right(){ /* A new typed object */ }
 
     function foo(){ console.log("Callback"); }
 
@@ -84,12 +111,16 @@
 	<div id="animation" class="textBackground" onclick="textIn()">
 		<span id="typed"> </span>
 	</div>
+
+	<div class="textBackground_right">
+		<span id="typed_right"> </span>
+	</div>
 	
 	<div class="energyMoniterBackground"></div>
 
 	<div id="player" class="hydrationMoniterBackground">
-		<iframe width="300" height="199" src="https://www.youtube.com/embed/ktjXm5L1WH0?autoplay=1&showinfo=0&start=200&
-    loop=1" volume="0" frameborder="0"></iframe>
+		<iframe width="350" height="227" src="https://www.youtube.com/embed/ktjXm5L1WH0?autoplay=1&showinfo=0&start=200&
+    loop=0" volume="0" frameborder="0"></iframe>
 	</div>
 	
 	<script>      // this code loads the IFrame Player API code asynchronously.
