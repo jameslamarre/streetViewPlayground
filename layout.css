@@ -9,23 +9,6 @@ html, body {
 	position: relative;
 	overflow: hidden;
 }
-	
-@keyframes animatedBackground {
-	from { background-position: 0% 0; }
-	to { background-position: 100% 0; }
-}
-@-webkit-keyframes animatedBackground {
-	from { background-position: 0 0; }
-	to { background-position: 100% 0; }
-}
-@-ms-keyframes animatedBackground {
-	from { background-position: 0 0; }
-	to { background-position: 100% 0; }
-}
-@-moz-keyframes animatedBackground {
-	from { background-position: 0 0; }
-	to { background-position: 100% 0; }
-}
 
 #background	{ 
 	width: 100%; 
@@ -85,18 +68,211 @@ a:visited {
 	color: black;
 	}
 
-.heartMoniterBackground {
+.topLeftBackground {
 	background-color: #F6F6F6;
 	opacity: 0.95;
 	position: absolute;
 	height: 10%;
-	width: 230px;
+	width: 40%;
 	top: 1%;
 	left: 0%;
+	padding: 8px;
+	overflow: scroll;
+	border: 1px solid #8D8B8B;
+	border-radius: 1px;
+	box-shadow: 0px 0px 0px #666666;
+    font-size: large;
+	/* -webkit-clip-path: polygon(0% 0%, 80% 0%, 100% 45%, 100% 100%, 20% 100%, 0% 65%); */
+}.contents {
+    display:inline-block;
+}.first {
+    width: 100%;
+    float: left;
+}.second {
+    width: 100%;
+    margin-left: 100%;
+    float: left;
+    padding-left: 10px;
+}.third {
+    width: 100%;
+    margin-left: 200%;
+    top: 0%;
+}
+
+.arrow {
+	position: absolute;
+	top: 3%;
+	left: 39.8%;
+	opacity: 0.9;
+}
+
+.hydrationMoniterBackground {
+	background-color: #F6F6F6;
+	opacity: 0.95;
+	position: absolute;
+	height: 24%;
+	width: 27%;
+	bottom: 0%;
+	right: 0%;
+	border-radius: 1px;
+	box-shadow: 1px 0px 0px #666666;
+	/* -webkit-clip-path: polygon(0% 75%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 50%); */
+}.energyMoniterBackground {
+	background-color: #F6F6F6;
+	opacity: 0.95;
+	position: absolute;
+	height: 30%;
+	width: 5%;
+	bottom: 0%;
+	right: 0%;
 	border: 1px solid #D1D1D1;
 	border-radius: 1px;
-	box-shadow: 1px 1px 0px #666666;
-	-webkit-clip-path: polygon(0% 0%, 80% 0%, 100% 45%, 100% 100%, 20% 100%, 0% 65%);
+	box-shadow: 1px 0px 0px #666666;
+	-webkit-clip-path: polygon(0% 30%, 100% 0%, 100% 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+.textBackground {
+	background-color: #FAFAFA;
+	opacity: 0.9;
+	position: absolute;
+	height: 40%;
+	width: 52%;
+	bottom: -30%;
+	left: 0.5%;
+	border: 1px solid #8D8B8B;
+	border-radius: 1px;
+	box-shadow: 1px 0px 0px #666666;
+	-webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    padding: 8px;
+    font-family: Helvetica;
+    font-size: medium;
+	overflow: scroll;
+}.textBackground_right {
+	background-color: #FAFAFA;
+	opacity: 0.9;
+	position: absolute;
+	height: 4%;
+	width: 10%;
+	top: 5%;
+	right: 0.5%;
+	border: 1px solid #8D8B8B;
+	border-radius: 1px;
+	box-shadow: 0px 0px 0px #666666;
+	-webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    padding: 8px;
+    font-family: Helvetica;
+    font-size: x-large;
+    text-align: center;
+	overflow: scroll;
+}
+
+.textBackground.slideup {
+    -webkit-transform: translate(0,-14em);
+    -moz-transform: translate(0,-14em);
+    -ms-transform: translate(0,-14em);
+    transform: translate(0,-14em);
+}
+.textBackground.slidedown {
+    -webkit-transform: translate(0,0em);
+    -moz-transform: translate(0,0em);
+    -ms-transform: translate(0,0em);
+    transform: translate(0,0em);
+}
+
+
+
+/* Styles for old versions of IE */
+.heartMoniter.left {
+	font-family: sans-serif;
+	font-weight: 100;
+	top: 3%;
+	left: 3%;
+}.heartMoniter.middle {
+	font-family: sans-serif;
+	font-weight: 100;
+	top: 3%;
+	left: 20%;
+}.heartMoniter {
+	font-family: sans-serif;
+	font-weight: 100;
+	top: 3%;
+	left: 37%;
+}
+
+	
+@keyframes animatedBackground {
+	from { background-position: 0% 0; }
+	to { background-position: 100% 0; }
+}
+@-webkit-keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+@-ms-keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+@-moz-keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+
+
+/* DEPRECATED */
+
+/* :not(:required) hides this rule from IE9 and below */
+.heartMoniter:not(:required) {
+  -webkit-animation: heartMoniter 2400ms ease 0s infinite normal;
+  -khtml-animation: heartMoniter 2400ms ease 0s infinite normal;
+  -moz-animation: heartMoniter 2400ms ease 0s infinite normal;
+  -ms-animation: heartMoniter 2400ms ease 0s infinite normal;
+  animation: heartMoniter 2400ms ease 0s infinite normal;
+  display: inline-block;
+  position: absolute;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 36px;
+  height: 36px;
+  -moz-transform: rotate(45deg) scale(0.7);
+  -ms-transform: rotate(45deg) scale(0.7);
+  -webkit-transform: rotate(45deg) scale(0.7);
+  transform: rotate(45deg) scale(0.7);
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+.heartMoniter:not(:required):after, .heartMoniter:not(:required):before {
+  position: absolute;
+  content: "";
+  background: #CC0000;
+}
+.heartMoniter:not(:required):before {
+  -moz-border-radius-topleft: 12px;
+  -webkit-border-top-left-radius: 12px;
+  border-top-left-radius: 12px;
+  -moz-border-radius-bottomleft: 12px;
+  -webkit-border-bottom-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  top: 12px;
+  left: 0;
+  width: 36px;
+  height: 24px;
+}
+.heartMoniter:not(:required):after {
+  -moz-border-radius-topleft: 12px;
+  -webkit-border-top-left-radius: 12px;
+  border-top-left-radius: 12px;
+  -moz-border-radius-topright: 12px;
+  -webkit-border-top-right-radius: 12px;
+  border-top-right-radius: 12px;
+  top: 0;
+  left: 12px;
+  width: 24px;
+  height: 12px;
 }
 @-webkit-keyframes spinner {
 	from { -webkit-transform: rotateY(0deg); -webkit-transform: rotateX(0deg); -webkit-transform: rotateZ(-1deg);   }
@@ -149,73 +325,6 @@ a:visited {
 	-ms-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 	-webkit-animation-direction: alternate;
-}
-.hydrationMoniterBackground {
-	background-color: #F6F6F6;
-	opacity: 0.95;
-	position: absolute;
-	height: 24%;
-	width: 27%;
-	bottom: 0%;
-	right: 0%;
-	border-radius: 1px;
-	box-shadow: 1px 1px 0px #666666;
-	/* -webkit-clip-path: polygon(0% 75%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 50%); */
-}.energyMoniterBackground {
-	background-color: #F6F6F6;
-	opacity: 0.95;
-	position: absolute;
-	height: 30%;
-	width: 5%;
-	bottom: 0%;
-	right: 0%;
-	border: 1px solid #D1D1D1;
-	border-radius: 1px;
-	box-shadow: 1px 1px 0px #666666;
-	-webkit-clip-path: polygon(0% 30%, 100% 0%, 100% 100%, 100% 100%, 100% 100%, 0% 100%);
-}
-.textBackground {
-	background-color: #FAFAFA;
-	opacity: 0.9;
-	position: absolute;
-	height: 40%;
-	width: 52%;
-	bottom: -30%;
-	left: 0.5%;
-	border: 1px solid #D1D1D1;
-	border-radius: 1px;
-	box-shadow: 1px 1px 1px #666666;
-	-webkit-transition: 0.5s ease-in-out;
-    -moz-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out;
-    padding: 10px;
-    font-family: Helvetica;
-    font-size: small;
-}.textBackground_right {
-	background-color: #FAFAFA;
-	opacity: 0.9;
-	position: absolute;
-	height: 4%;
-	width: 10%;
-	top: 5%;
-	right: 0.5%;
-	border: 1px solid #D1D1D1;
-	border-radius: 1px;
-	box-shadow: 1px 1px 1px #666666;
-	-webkit-transition: 0.5s ease-in-out;
-    -moz-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out;
-    padding: 10px;
-    font-family: Helvetica;
-    font-size: x-large;
-    text-align: center;
-}
-
-.textBackground.slideup {
-    -webkit-transform: translate(0,-14em);
-    -moz-transform: translate(0,-14em);
-    -ms-transform: translate(0,-14em);
-    transform: translate(0,-14em);
 }
 
 }@-webkit-keyframes heartMoniter {
@@ -277,75 +386,4 @@ a:visited {
     -webkit-transform: rotate(45deg) scale(0.7);
     transform: rotate(45deg) scale(0.7);
   }
-}
-
-
-/* Styles for old versions of IE */
-.heartMoniter.left {
-	font-family: sans-serif;
-	font-weight: 100;
-	top: 3%;
-	left: 3%;
-}.heartMoniter.middle {
-	font-family: sans-serif;
-	font-weight: 100;
-	top: 3%;
-	left: 20%;
-}.heartMoniter {
-	font-family: sans-serif;
-	font-weight: 100;
-	top: 3%;
-	left: 37%;
-}
-
-/* :not(:required) hides this rule from IE9 and below */
-.heartMoniter:not(:required) {
-  -webkit-animation: heartMoniter 2400ms ease 0s infinite normal;
-  -khtml-animation: heartMoniter 2400ms ease 0s infinite normal;
-  -moz-animation: heartMoniter 2400ms ease 0s infinite normal;
-  -ms-animation: heartMoniter 2400ms ease 0s infinite normal;
-  animation: heartMoniter 2400ms ease 0s infinite normal;
-  display: inline-block;
-  position: absolute;
-  overflow: hidden;
-  text-indent: -9999px;
-  width: 36px;
-  height: 36px;
-  -moz-transform: rotate(45deg) scale(0.7);
-  -ms-transform: rotate(45deg) scale(0.7);
-  -webkit-transform: rotate(45deg) scale(0.7);
-  transform: rotate(45deg) scale(0.7);
-  -moz-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  -webkit-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-}
-.heartMoniter:not(:required):after, .heartMoniter:not(:required):before {
-  position: absolute;
-  content: "";
-  background: #CC0000;
-}
-.heartMoniter:not(:required):before {
-  -moz-border-radius-topleft: 12px;
-  -webkit-border-top-left-radius: 12px;
-  border-top-left-radius: 12px;
-  -moz-border-radius-bottomleft: 12px;
-  -webkit-border-bottom-left-radius: 12px;
-  border-bottom-left-radius: 12px;
-  top: 12px;
-  left: 0;
-  width: 36px;
-  height: 24px;
-}
-.heartMoniter:not(:required):after {
-  -moz-border-radius-topleft: 12px;
-  -webkit-border-top-left-radius: 12px;
-  border-top-left-radius: 12px;
-  -moz-border-radius-topright: 12px;
-  -webkit-border-top-right-radius: 12px;
-  border-top-right-radius: 12px;
-  top: 0;
-  left: 12px;
-  width: 24px;
-  height: 12px;
 }

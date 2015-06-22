@@ -29,7 +29,18 @@
 	<link rel="stylesheet" type="text/css" href="layout.css" />
 	
 	<!-- a n i m a t i o n s  -->
-	
+
+<!-- toggling attempts
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$("textBackground slideup").click(function(){
+				$("animation").slideToggle();
+			});
+		});
+	</script>
+-->	
 	<script type="text/javascript">
 		function textIn(){
 			document.getElementById('animation').className ='textBackground slideup';
@@ -44,7 +55,7 @@
     $(function(){
 
         $("#typed").typed({
-            strings: ["Can damming occur in the body? would it be visibly rendered on the skin, on the face? Are there dammed bodies moving among us, their movements themselves stopped and gapped -- by 50% or more? Is this the body of the populace, the emotional body that’s being damned, dammed with minor repressions, hatching through their walls -- nodes shining like star explosions, but faster -- and dimming, regressing back behind its wall until opportunity -- again -- strikes. <br/><br/> Kicking out through experiences and moving for movement leaves no time for anything else. Moving takes time, it’s durational, and when movement needs to be already augmented by lattices of decency and social constructions (shelter, aromatics) as well as the ways of movement themselves, when the body does not enact a particular transportation from point a to point b but instead relies on another vehicle. How fast would train a have to go to meet point b, somewhere out west?"],
+            strings: ["The European Environment Agency designates a naturally occurring mass of water whose contents have been permanently altered Heavily Modified Water Bodies (HMWB). <br/><br/> Designation of heavily modified water bodies (WFDUK) { <br/><br/> Water bodies identified as being at significant risk of failing to achieve good ecological status because of modifications to their hydromorphological characteristics resulting from past engineering works, including impounding works, were provisionally identified as heavily modified for the Article 5 report. These are recorded as modified on the WFD characterisation database and there are currently 476 such water bodies in Scotland, and 3301 in England and Wales. In order for a water body to be designated heavily modified evidence is required to show that the water body would not achieve good status without measures being applied in relation to the modifications that have been made to the hydromorphological characteristics. This paper outlines principles for the methodologies the UK will use to identify which of these bodies can be designated without the need for detailed site-specific studies. <br/><br/> To make the case for designation, evidence is required that: <br/><br/> (a) Making the hydromorphological improvements necessary to achieve good status would have a significant adverse effect on the wider environment or on a specified water use; <br/><br/> AND <br/><br/> (b) For reasons of technical feasibility or disproportionate cost, there is no significantly better environmental option to reasonably achieve the benefits provided by the modifications. If both criteria are met then the water body should be designated heavily modified. <br/><br/> } <br/><br/> By European Environment Agency (EEA) { <br/><br/>HMWB are bodies of water which as a result of physical alterations by human activity are substantially changed in character and cannot, therefore, meet good ecological status (GES). In this context physical alterations mean changes to e.g. the size, slope, discharge, form and shape of river bed of a water body. <br/><br/> Intensive agriculture, urbanisation, energy production and flood protection have altered European hydrological systems and freshwater habitats for decades. Climate change adds to these challenges (higher water temperature, more floods or water scarcity). Less than half of all water bodies have a 'good status'. <br/><br/> Full and coordinated implementation of water and nature legislation would restore aquatic habitats and foster water efficiency. <br/><br/> The natural capital of water ecosystems is highly intertwined and dependant on the way land and water is managed and how pressures from agriculture, energy, transport etc. are reduced within their respective policy areas or how adaptation to climate change is integrated into water management. <br/><br/> Urban water management has over many years used rivers only as extensions of the sewage system. Urban rivers have been covered, river banks have been heavily developed, and lakes have been isolated or even filled. Impervious sewage collection systems have changed the water flow regime. <br/><br/> }"],
             typeSpeed: 2,
             backDelay: 1000,
             loop: false,
@@ -71,7 +82,7 @@
     $(function(){
 
         $("#typed_right").typed({
-            strings: ["CANYON", "FOREST", "+", "DRY", "UPTIGHT"],
+            strings: ["CANYON", "LACUNA", "LE LAC", "TRASCIBLE", "ARCS", "EITHER", "LOCH", "L'INNCONU", "REEDS", "BUTTERFLY", "POWDER", "CLEAR", "HEAVILY", "DAY", "SWEAT", "FOREST", "+", "DRY", "UPTIGHT"],
             typeSpeed: 5,
             backDelay: 1500,
             loop: true,
@@ -93,17 +104,46 @@
     function foo(){ console.log("Callback"); }
 
     </script>
+    
+    <!-- scrolling js -->
+    
+    <script type="text/javascript" language="javascript">
+		
+
+		$('#arrow').click(function(){
+			$('#first').css('margin-left','300');
+		});
+
+		
+	</script>
 
 	<!-- ****** E N D C O N T E N T *****-->
 	
 </head>
 
 <body>
-	
-	<div id="spinner" class="heartMoniterBackground">
+
+	<div class="topLeftBackground" id="scrollDiv">
+
+<!--	<div id="spinner" class="heartMoniterBackground">
 		<span class="heartMoniter">Loading...</span>
 		<span class="heartMoniter left">Loading...</span>
-		<span class="heartMoniter middle">Loading...</span>
+		<span class="heartMoniter middle">Loading...</span> -->
+		<div class="first">
+			Can damming occur in the body? would it be visibly rendered on the skin, on the face? Are there dammed bodies moving among us, their movements themselves stopped and gapped -- by 50% or more? Is this the body of the populace, the emotional body that’s being damned, dammed with minor repressions, hatching through their walls -- nodes shining like star explosions, but faster -- and dimming, regressing back behind its wall until opportunity -- again -- strikes. 
+		</div>
+		
+		<div class="second">
+			Does more than 50% of my water come from a single source? Does it go to a single source? Who aligned the tributary, pointing sometimes toward the moon -- sometimes toward you, so much I have to drink water continuously all day or I start heaving, deserts forming at the dams, air passing over dry parts as water rushes anywhere else, anywhere but my heavily modified water body. 
+		</div>
+		
+		<div class="third">
+I wonder what I would have done in the 70’s. I’ve sat in those sweat boxes before, waiting for myself, offers at hand. I just need to warm up. I just need to warm up, a bit longer. Sweat dribbles down my arm quietly onto the wood. 
+		</div>
+	</div>
+	
+	<div class="arrow" id="right">
+		<img src="rightArrow.png">
 	</div>
 
 <!-- ****** CHANGE ALL THIS TO JUST TEXT IN BOXES ALIGNED IN ANGLES CONGRUENT TO STREET VIEW BOX *****-->
@@ -117,8 +157,8 @@
 	</div>
 	
 	<div class="energyMoniterBackground"></div>
-
-	<div id="player" class="hydrationMoniterBackground">
+	
+<!--	<div id="player" class="hydrationMoniterBackground">
 		<iframe width="350" height="227" src="https://www.youtube.com/embed/ktjXm5L1WH0?autoplay=1&showinfo=0&start=200&
     loop=0" volume="0" frameborder="0"></iframe>
 	</div>
@@ -144,7 +184,7 @@
 			event.target.mute();
 		  }
 	</script>
-	
+-->
 	<iframe
 		width="100%"
 		height="100%"
