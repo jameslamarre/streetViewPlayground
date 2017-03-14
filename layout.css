@@ -10,9 +10,9 @@ html, body {
 	overflow: hidden;
 }
 
-#background	{ 
-	width: 100%; 
-	height: 110%; 
+#background	{
+	width: 100%;
+	height: 110%;
 	background-image: url(bg-clouds.jpg);
 	background-position: 0px 0px;
 	background-repeat: repeat-x;
@@ -60,11 +60,11 @@ html, body {
 	background-color:rgba(255,255,255,0.5);
 }
 
-a:link { 
+a:link {
 	color: black;
 	text-decoration: none;
 	}
-a:visited { 
+a:visited {
 	color: black;
 	}
 
@@ -168,7 +168,7 @@ a:visited {
 	position: absolute;
 	height: 40%;
 	width: 50%;
-	bottom: -30%;
+	bottom: -28%;
 	left: 0.5%;
 	border: 1px solid #8D8B8B;
 	border-radius: 1px;
@@ -179,7 +179,7 @@ a:visited {
     padding: 8px;
     font-family: Helvetica;
     font-size: large;
-	overflow: scroll;
+	overflow: hidde;
 }.textBackground_right {
 	background-color: #FAFAFA;
 	opacity: 0.9;
@@ -234,7 +234,7 @@ a:visited {
 	left: 37%;
 }
 
-	
+
 @keyframes animatedBackground {
 	from { background-position: 0% 0; }
 	to { background-position: 100% 0; }
@@ -436,7 +436,7 @@ a:visited {
 		to { transform: rotateY(360deg); }
 	}
 
-	
+
 	/*************** STANDARD CUBE ***************/
 	.cube-wrap {
 		-webkit-perspective: 800px;
@@ -459,10 +459,10 @@ a:visited {
 		margin: 0 auto;
 		bottom: 0%;
 		right: 2%;
-		
+
 		-webkit-transform-style: preserve-3d;
 		-webkit-animation: cube-spin 10s infinite linear;
-		
+
 		-moz-transform-style: preserve-3d;
 		-moz-animation: cube-spin 10s infinite linear;
 
